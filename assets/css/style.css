@@ -1,10 +1,12 @@
+/* GLOBALS */
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -12,6 +14,20 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
 }
+
+button:hover {
+  outline: 0 !important; /* We hate outlines here */
+}
+
+button:focus {
+  outline: 0 !important; /* We still hate outlines here */
+}
+
+ol {
+  list-style: none;
+}
+
+/* CUSTOM */
 
 .jumbotron {
   text-align: center;
@@ -21,19 +37,13 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
+.time-block {
+  height: 100px;
+  padding-bottom: 1px;
 }
 
 .hour {
@@ -42,20 +52,21 @@ textarea{
   border-top: 1px dashed #000000;
 }
 
+/* Colors for time states */
+
 .past {
   background-color: #d3d3d3;
-  color: white;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
 }
+
+/* Button related styles */
 
 .saveBtn {
   border-left: 1px solid black;
@@ -63,9 +74,33 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  border: 0;
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  color: black;
   transition: all .3s ease-in-out;
+}
+
+.button-img {
+  display: block; 
+  margin: auto;
+  text-align: center; 
+  font-size: 24px;
+  width: 40%;
+}
+
+/* Classes for custom column (bootstrap was a bit of a pain) */
+
+.column-side {
+  float: left;
+  width: 15%;
+  height: 100%;
+  padding: 10px;
+}
+.column-middle {
+  float: left;
+  width: 70%;
+  height: 100%;
+  padding: 10px;
 }
